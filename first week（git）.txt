@@ -1,0 +1,286 @@
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git add .
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ^C
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   abc.txt
+        new file:   "\347\254\254\344\270\200\345\221\250.txt"
+
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git remote -v
+origin  https://github.com/liumingze18/jinjiu.git (fetch)
+origin  https://github.com/liumingze18/jinjiu.git (push)
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git commit -m "first commit"
+[master fdb9be0] first commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.txt
+ create mode 100644 "\347\254\254\344\270\200\345\221\250.txt"
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git remote add origin https://github.com/liumingze18/jinjiu
+fatal: remote origin already exists.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ^C
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git remote rm origin
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git remote add origin https://github.com/liumingze18/jinjiu
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 76.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/liumingze18/jinjiu
+   4f1aa62..fdb9be0  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git clone https://github.com/liumingze18/jinjiu
+Cloning into 'jinjiu'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+drwxr-xr-x 1 金九 197121 0 10月 25 11:00 jinjiu/
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35 README.md
+-rw-r--r-- 1 金九 197121 0 10月 25 10:40 第一周.txt
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35 README.md
+-rw-r--r-- 1 金九 197121 0 10月 25 10:40 第一周.txt
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git add .
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35 README.md
+-rw-r--r-- 1 金九 197121 0 10月 25 10:40 第一周.txt
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$
+
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$
+l
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35 README.md
+-rw-r--r-- 1 金九 197121 0 10月 25 10:40 第一周.txt
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git add .
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git commit -m "2018-10-25"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35 README.md
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ touch 'first week'
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 0 10月 25 11:16 'first week'
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35  README.md
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git commit -m "2018-10-25"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+        deleted:    "\347\254\254\344\270\200\345\221\250.txt"
+
+Untracked files:
+        first week
+
+no changes added to commit
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/zcy/Documents/GitHub/jinjiu/.git/
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git add .
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git commit -m '2018-10-25'
+[master 2952af0] 2018-10-25
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename "\347\254\254\344\270\200\345\221\250.txt" => first week (100%)
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+To https://github.com/liumingze18/jinjiu
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/liumingze18/jinjiu'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git remote add origin https://github.com/liumingze18/jinjiu
+fatal: remote origin already exists.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+To https://github.com/liumingze18/jinjiu
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/liumingze18/jinjiu'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git pull --rebase origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From https://github.com/liumingze18/jinjiu
+ * branch            master     -> FETCH_HEAD
+   145250b..84ac67f  master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: 2018-10-25
+Using index info to reconstruct a base tree...
+A       "\347\254\254\344\270\200\345\221\250.txt"
+Falling back to patching base and 3-way merge...
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 100.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/liumingze18/jinjiu
+   84ac67f..48bdf8c  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 0 10月 25 11:19 'first week'
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35  README.md
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 0 10月 25 11:19 'first week'
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35  README.md
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ touch 'first week.txt'
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 0 10月 25 11:19 'first week'
+-rw-r--r-- 1 金九 197121 0 10月 25 11:29 'first week.txt'
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35  README.md
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ rm 'first week'
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ ll
+total 1
+-rw-r--r-- 1 金九 197121 0 10月 25 11:29 'first week.txt'
+-rw-r--r-- 1 金九 197121 8 10月 25 10:35  README.md
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git add .
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git commit -m '2018-10-25'
+[master 09059ea] 2018-10-25
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename first week => first week.txt (100%)
+
+金九@DESKTOP-LC5A1QV MINGW64 ~/Documents/GitHub/jinjiu (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 291 bytes | 97.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/liumingze18/jinjiu
+   48bdf8c..09059ea  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
