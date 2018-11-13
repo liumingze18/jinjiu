@@ -1,0 +1,384 @@
+Microsoft Windows [版本 10.0.17134.345]
+(c) 2018 Microsoft Corporation。保留所有权利。
+
+C:\Users\zcy>python
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:54:40) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> def aa()：
+  File "<stdin>", line 1
+    def aa()：
+            ^
+SyntaxError: invalid character in identifier
+>>> def aa():
+...     print("1.aaaaaaa")
+...     print("2.bbbbbbb")
+...     print("3.ccccccc")
+...
+>>> aa()
+1.aaaaaaa
+2.bbbbbbb
+3.ccccccc
+>>> def myadd():
+...
+  File "<stdin>", line 2
+
+    ^
+IndentationError: expected an indented block
+>>> def myadd(m1+m2):
+  File "<stdin>", line 1
+    def myadd(m1+m2):
+                ^
+SyntaxError: invalid syntax
+>>> def myadd(m1,m2):
+...     print(m1+m2)
+...
+>>> myadd(10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: myadd() missing 1 required positional argument: 'm2'
+>>> myadd(10,10)
+20
+>>> myadd(10,10,10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: myadd() takes 2 positional arguments but 3 were given
+>>>
+>>> def stu(name='张三',age=20,sex="")
+  File "<stdin>", line 1
+    def stu(name='张三',age=20,sex="")
+                                    ^
+SyntaxError: invalid syntax
+>>> def stu(name='张三',age=20,sex="man"):
+...     print("姓名:{}；年龄:{}；性别:{}".format(name,age,sex))
+...
+>>> stu()
+姓名:张三；年龄:20；性别:man
+>>> stu(name='lisi',sex='woman',age=25)
+姓名:lisi；年龄:25；性别:woman
+>>>
+>>> def demo(*arg):
+...     sum=0
+...     for i in arg:
+...             sum+=i
+...     print("累加值：",sum)
+...
+>>> demo(10,20,30,40)
+累加值： 100
+>>>
+>>> def demo(m,**arg):
+...     print(m)
+...     print(arg)
+...
+>>> demo(10,name="zhangsan",age=20)
+10
+{'name': 'zhangsan', 'age': 20}
+>>>
+>>>
+>>> def sum(m):
+...     '''
+...     这是一个计算累加函数
+...     参数一个int类型
+...     返回一个累加值
+...     '''
+...     total=0
+...     for i in range(0,m+1):
+...             total+=i
+...     return total
+...
+>>> sum(10)
+55
+>>> a=sum(50)
+>>> print("50的累加:",sum(50))
+50的累加: 1275
+>>> print("100的累加:",sum(100))
+100的累加: 5050
+>>> name="zhangsan"
+>>> def fun():
+...     global name
+...     print("函数内输出全局：",name)
+...     name="lisi"
+...     age=30
+...     age+=2
+...     print("函数内输出局部",age)
+...
+>>> fun()
+函数内输出全局： zhangsan
+函数内输出局部 32
+>>> print ("函数外输出全局变量",name)
+函数外输出全局变量 lisi
+>>> print("函数外数据局部变量",age)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'age' is not defined
+>>>
+>>>
+>>> sum = lambda v1,v2:v1+v2
+>>> print(sum(10,20))
+30
+>>>
+>>> #内置对象
+... print(abs(-10))
+10
+>>> print(round(3.1415926,4))
+3.1416
+>>> print (max([20,10,40]))
+40
+>>> print (min([20,10,40]))
+10
+>>> import math
+>>> print(math.fabs(-10))
+10.0
+>>> print(math.ceil(4.01))
+5
+>>> print(math.floor(4.99))
+4
+>>> import random
+>>> print(random.random())
+0.2977140992457361
+>>> print(random.choice(["a","c","c"]))
+c
+>>> print(random.randrange(10))
+1
+>>> print(random.randrange(10))
+8
+>>> print(random.randrange(5,10))
+6
+>>> print(random.randrange(1,10,2))
+9
+>>> a=[10,20,30,40]
+>>> random.shuffle(a)
+>>> print(a)
+[10, 40, 30, 20]
+>>>
+>>> math.sin(90)
+0.8939966636005579
+>>> math.cos(0)
+1.0
+>>> print(math.pi)
+3.141592653589793
+>>> math.pi
+3.141592653589793
+>>> math.e
+2.718281828459045
+>>>
+>>>
+>>> print("aaa\\bbb\"ccc\nddd\teee")
+aaa\bbb"ccc
+ddd     eee
+>>> print("aa"+"bb")
+aabb
+>>> print("abc"*2)
+abcabc
+>>>
+>>> s="zhangsan"
+>>> print(s[1])
+h
+>>> print(s[0:5])
+zhang
+>>> print("san" in s)
+True
+>>> print("san" not in s)
+False
+>>> print(r"aa\nbb\\cc")
+aa\nbb\\cc
+>>>
+>>> #%格式化字符串
+... print("我叫%s,今年%d岁"%（'xiaoming'20,）)
+  File "<stdin>", line 2
+    print("我叫%s,今年%d岁"%（'xiaoming'20,）)
+                       ^
+SyntaxError: invalid character in identifier
+>>> print("我叫%s,今年%d岁"%（'xiaoming',20）)
+  File "<stdin>", line 1
+    print("我叫%s,今年%d岁"%（'xiaoming',20）)
+                       ^
+SyntaxError: invalid character in identifier
+>>> print("我叫%s,今年%d岁"%('xiaoming',20))
+我叫xiaoming,今年20岁
+>>>
+>>> print("110的八进制：0o%o；十六进制：0x%x"%(110,110))
+110的八进制：0o156；十六进制：0x6e
+>>>
+>>> print("12.45678保留小数位后俩位：%0.2f"%(12.45678))
+12.45678保留小数位后俩位：12.46
+>>>
+>>>
+>>> #字符串的内建函数
+... print(len("zhangsan"),max("abc"),min("abc"))
+8 c a
+>>> print("ZhangSan".lower(),"ZhangSan".upper())
+zhangsan ZHANGSAN
+>>> print("zhangsan字符串中出现an的次数：","zhangsan".count("an"))
+zhangsan字符串中出现an的次数： 2
+>>> print("10:20:30".replace(":","@"))
+10@20@30
+>>> print("10:20:30".split(":"))
+['10', '20', '30']
+>>> print("zhangsan".find("an"))
+2
+>>> print("zhangsan".index("an"))
+2
+>>> print("zhangsan".rfind("an"))
+6
+>>> print("  aaa  ".strip())
+aaa
+>>> print("  aaa  ".lstrip())
+aaa
+>>> print("bbb  aaa  ccc".lstrip())
+bbb  aaa  ccc
+>>> print("bbb  aaa  ccc".rstrip())
+bbb  aaa  ccc
+>>> print("bbb  aaa  ccc".rstrip("aaa"))
+bbb  aaa  ccc
+>>>
+>>>
+>>>
+>>> ##数据类型的操作之LIST列表
+... list0=[]
+>>> list1=['google','python',1997,2000]
+>>> list2=[1,2,3,4,5,6]
+>>> print("list1[0]:",list1[0])
+list1[0]: google
+>>> print("list2[1:5]:",list2[1:5])
+list2[1:5]: [2, 3, 4, 5]
+>>> print("list1的第三个元素为：",list1[2])
+list1的第三个元素为： 1997
+>>>
+>>>
+>>> list1[2]=2001
+>>> print("list1的第三个元素为：",list1[2])
+list1的第三个元素为： 2001
+>>>
+>>>
+>>> del list1[2]
+>>> print("list1删除第三个元素：",list1)
+list1删除第三个元素： ['google', 'python', 2000]
+>>>
+>>> a=[10,20,30,40,59]
+>>>
+>>> for i in a:
+...     print(i)
+...
+10
+20
+30
+40
+59
+>>> i=0
+>>> while i<len(a):
+...     print(a[i])
+...     i+=1
+...
+10
+20
+30
+40
+59
+>>>
+>>> b=[[10,20],[30,40],[50,60]]
+>>>
+>>> for v1,v2 in b:
+...     print(v1,v2)
+...
+10 20
+30 40
+50 60
+>>>
+>>> b=[[10,20],[30,40,50,60],[70,80,90]]
+>>> for v in b :
+...     print(i,end=" ")
+... print()
+  File "<stdin>", line 3
+    print()
+        ^
+SyntaxError: invalid syntax
+>>> for i in b:
+...     print(i,end=" ")
+... print()
+  File "<stdin>", line 3
+    print()
+        ^
+SyntaxError: invalid syntax
+>>> for v in b :
+...     for i in v :
+...             print(i,end =" ")
+...     print()
+...
+10 20
+30 40 50 60
+70 80 90
+>>>
+>>> ##列表的操作符
+... a=[1,2,3]
+>>> b=[4,5,6,7]
+>>> print(len(a))
+3
+>>> print(a+b)
+[1, 2, 3, 4, 5, 6, 7]
+>>> print(a*2)
+[1, 2, 3, 1, 2, 3]
+>>> print(6 in a)
+False
+>>> print(b[2])
+6
+>>> print(b[-1])
+7
+>>> print(b[1:])
+[5, 6, 7]
+>>> print(b[1:3])
+[5, 6]
+>>>
+>>> ###列表的函数和方法
+... a=["zhangsan","lisi"]
+>>>
+>>> a.append("wanger")
+>>> a.extend("jinjiu","lingqiu")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: extend() takes exactly one argument (2 given)
+>>> a.extend(["jinjiu","lingqiu"])
+>>> print(a)
+['zhangsan', 'lisi', 'wanger', 'jinjiu', 'lingqiu']
+>>>
+>>> a.insert(3,"rongcheng")
+>>> print(a)
+['zhangsan', 'lisi', 'wanger', 'rongcheng', 'jinjiu', 'lingqiu']
+>>>
+>>> print(a.count('lisi'))
+1
+>>> print(a.index('lisi'))
+1
+>>> print(a.index('wanger'))
+2
+>>> print(a.pop(2))
+wanger
+>>> print(a)
+['zhangsan', 'lisi', 'rongcheng', 'jinjiu', 'lingqiu']
+>>> a.remove('lisi')
+>>> print(a)
+['zhangsan', 'rongcheng', 'jinjiu', 'lingqiu']
+>>> a.reverse()
+>>> print(a)
+['lingqiu', 'jinjiu', 'rongcheng', 'zhangsan']
+>>> a.sort()
+>>> print(a)
+['jinjiu', 'lingqiu', 'rongcheng', 'zhangsan']
+>>> b=a
+>>> c.a.copy()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'c' is not defined
+>>> c=a.copy()
+>>>
+>>> print(id(a),id(b),id(c))
+2416604338888 2416604338888 2416604339272
+>>> print(id(a))
+2416604338888
+>>> a.clear()
+>>> print(a)
+[]
+>>> print(b)
+[]
+>>> print(c)
+['jinjiu', 'lingqiu', 'rongcheng', 'zhangsan']
+>>>
